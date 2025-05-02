@@ -1,0 +1,121 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Skills from "../components/about/Skills.astro";
+import Stack from "../components/about/Stack.astro";
+import "../styles/global.css";
+---
+
+<Layout>
+  <section
+    id="title-about"
+    class="inline-flex justify-center items-center w-full mt-30 pt-20"
+  >
+    <h1 class="text-[var(--text)] text-7xl font-cal-sans tracking-wider">
+      Sobre mí<span class="text-[var(--accent)]">.</span>
+    </h1>
+  </section>
+
+  <div class="grid grid-cols-1 lg:grid-cols-5 gap-0 lg:px-20 px-4 py-20">
+    <!-- ABOUT -->
+    <div
+      id="about"
+      class="order-1 lg:order-none lg:col-span-3 bg-[var(--tertiary)] rounded-t-[50px] lg:rounded-t-[100px] p-10 lg:pb-0 pb-15"
+    >
+      <div
+        class="inline-flex justify-center lg:items-center items-start gap-6 w-full mt-5"
+      >
+        <div class="w-40 h-full lg:w-[200px] lg:h-full">
+          <img
+            src="/public/img/profile.jpeg"
+            alt="Foto de Antonia"
+            class="rounded-4xl w-full h-full object-cover cursor-pointer"
+          />
+        </div>
+
+        <div class="w-full text-start lg:text-left">
+          <h1
+            class="text-[var(--text)] text-2xl lg:text-2xl font-cal-sans tracking-wider"
+          >
+            Hola👋🏻!, soy Antonia<span class="text-[var(--accent)]">.</span>
+          </h1>
+          <br />
+
+          <div class="grid gap-3 text-xs tracking-wider leading-6">
+            <p>
+              Al terminar mi último año de Ingeniería Informática, indentifiqué
+              mi habilidad y gusto en el diseño de interfaces y experiencias
+              digitales centradas en el usuario.
+            </p>
+            <p>
+              Hoy me considero una apasionada por el diseño web. Y sin duda
+              puedo afirmar que es algo que realmente disfruto hacer.
+            </p>
+            <p>
+              Comencé timidamente aprendiendo lo básico con distintas
+              tecnologías web para finalmente convertirme en una especie de
+              Fullstack Angular Serverless AWS.
+            </p>
+            <p>
+              Cuento con más de 3+ años de experiencia. Y me mantengo en
+              constante aprendizaje.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SKILLS -->
+    <div
+      id="skills"
+      class="order-3 lg:order-none lg:col-span-2 bg-[var(--primary)] rounded-t-[50px] lg:rounded-t-[100px] p-10 lg:pb-30 pb-20 lg:-mt-0 -mt-10 lg:z-0 z-10"
+    >
+      <Skills />
+    </div>
+
+    <!-- BUTTONS -->
+    <div
+      id="buttons"
+      class="order-2 lg:order-none lg:col-span-2 bg-[var(--text)] p-10 rounded-t-[50px] lg:rounded-t-[100px] lg:rounded-bl-lg pb-20 lg:pb-0 -mt-10 lg:-mt-20 z-10"
+    >
+      <div class="grid grid-cols-1 gap-6 text-start">
+        <h1
+          class="text-[var(--textContrast)] text-3xl lg:text-4xl font-cal-sans tracking-wider"
+        >
+          Curriculum<span class="text-[var(--accent)]">.</span>
+        </h1>
+        <button
+          class="shadow-[var(--shadowBox)] w-full lg:w-40 bg-[var(--accent)] text-[var(--text)] font-cal-sans lowercase tracking-widest px-6 py-3 text-xs rounded-[30px] cursor-pointer"
+        >
+          Descargar CV
+        </button>
+      </div>
+    </div>
+
+    <!-- STACK -->
+    <div
+      id="stack"
+      class="order-4 lg:order-none relative lg:col-span-3 bg-[var(--backgroundCardLight)] p-10 rounded-t-[50px] lg:rounded-t-[100px] lg:rounded-br-lg rounded-b-lg -mt-10 lg:-mt-20 z-10"
+    >
+      <Stack />
+    </div>
+  </div>
+</Layout>
+
+<style>
+  img {
+    box-shadow: var(--shadowBox);
+  }
+  img:hover {
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+    transform: scale(1.05);
+  }
+  .about-pill:hover {
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+</style>

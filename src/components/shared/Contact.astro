@@ -1,0 +1,36 @@
+---
+import SocialBar from "./SocialBar.astro";
+---
+
+<section id="hablemos" class="bg-[var(--backgroundCards)] rounded-t-[100px]">
+  <div
+    class="lg:inline-flex grid w-full justify-center items-center lg:space-x-10 space-x-0 px-20 py-20"
+  >
+    <div class="flex-col w-auto space-y-10 text-center">
+      <h1
+        class="text-[var(--text)] text-7xl w-full font-cal-sans tracking-wider"
+      >
+        Hablemos<span class="text-[var(--accent)]">!</span>
+      </h1>
+      <SocialBar />
+      <p
+        class="text-[var(--text)] font-cal-sans text-xs tracking-widest text-center"
+      >
+        ©️ 2025. Antonia Valdivieso. Todos los derechos reservados.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes popIn {
+    0% {
+      transform: scale(0.7);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+</style>

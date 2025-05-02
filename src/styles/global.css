@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .gradient-line {
+    background-image: var(--gradient);
+  }
+}
+
+
+@layer base {
+  :root {
+    --text: #060909;
+    --textContrast: #F7F9F9;
+    --background: #f3f7f7;
+    --backgroundCards: #eaefef ;
+    --backgroundCardLight: #EDF2F2;
+    --primary: #699a9b;
+    --secondary: #baafca;
+    --tertiary: #E2E2EA;
+    --accent: #b491b6;
+    --chat-primary: #f3f7f7;
+    --chat-message: #060909;
+    --gradient:linear-gradient(90deg,rgba(105, 154, 155, 1) 0%, rgba(180, 145, 182, 1) 50%, rgba(6, 9, 9, 1) 100%);
+    --shadowBox: 0 4px 10px rgba(6, 9, 9, 0.2); /* sombra oscura para fondo claro */
+  }
+  .dark {
+    --text: #f6f9f9;
+    --textContrast: #060909;
+    --background: #080c0c;
+    --backgroundCards: #191821;
+    --backgroundCardLight: #1A2727;
+    --primary: #649596;
+    --secondary: #403550;
+    --tertiary: #0D1313;
+    --accent: #6c496e;
+    --chat-primary: #f6f9f9;
+    --chat-message: #060909;
+    --gradient: linear-gradient(90deg,rgba(100, 149, 150, 1) 0%, rgba(108, 73, 110, 1) 50%, rgba(64, 53, 80, 1) 100%);
+    --shadowBox: 0 4px 10px rgba(255, 255, 255, 0.05), 0 1px 2px rgba(255, 255, 255, 0.03); /* sombra clara para fondo oscuro */
+  }
+}
+
+.font-cal-sans {
+  font-family: "Cal Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* From Uiverse.io by zjssun */ 
+button {
+  position: relative;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+button:before,
+button:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
+}
+

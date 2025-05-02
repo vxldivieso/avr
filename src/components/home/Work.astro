@@ -1,0 +1,166 @@
+<div class="bg-[var(--backgroundCards)] w-full">
+  <section
+    id="mi-trabajo"
+    class="bg-[var(--background)] rounded-t-[100px] mb-20 lg:px-30 px-3"
+  >
+    <div
+      id="title"
+      class="inline-flex w-full justify-center items-center my-20 lg:px-30 px-20"
+    >
+      <div id="title" class="flex-col w-auto space-y-4 text-center">
+        <h1 class="text-[var(--text)] text-7xl font-cal-sans tracking-wider">
+          Mi trabajo<span class="text-[var(--accent)]">.</span>
+        </h1>
+        <p class="text-[var(--text)] text-lg font-cal-sans tracking-widest">
+          Selección de algunos de mis trabajos
+        </p>
+      </div>
+    </div>
+    <div id="trabajos" class="grid grid-cols-1 gap-10 content-center">
+      <div
+        id="trabajo-card"
+        class="w-full lg:inline-flex flex-row justify-center lg:space-x-10 items-center"
+      >
+        <div
+          id="circle"
+          class="p-2 bg-[var(--secondary)] rounded-full lg:block hidden"
+        >
+        </div>
+        <div id="trabajo-descripcion" class="grid gap-4 w-full">
+          <div
+            id="proyecto"
+            class="inline-flex justify-start items-end w-full space-x-4"
+          >
+            <h3 class="text-2xl font-cal-sans tracking-wider">Wild Lion</h3>
+            <p class="font-cal-sans text-sm">2025</p>
+          </div>
+          <p id="descripcion" class="font-cal-sans text-md tracking-widest">
+            Un proyecto lleno de cariño. Pensado en los más peques. Portal web y
+            ecommerce. <br />
+            <span class="text-[var(--secondary)] font-cal-sans"
+              >Diseño y desarrollo.</span
+            >
+          </p>
+          <div
+            id="process-pill"
+            class="font-cal-sans tracking-widest text-xs bg-[var(--primary)] text-[var(--textContrast)] w-32 text-center p-[10px] rounded-[30px] cursor-pointer"
+          >
+            En proceso
+          </div>
+        </div>
+        <div
+          id="video"
+          class="flex flex-col lg:flex-row justify-center items-center gap-4"
+        >
+          <!-- Video Desktop -->
+          <div class="w-full lg:w-[350px] bg-[var(--text)] lg:h-[200px]">
+            <video
+              src="/video/wildlion-web.mov"
+              autoplay
+              muted
+              loop
+              class="w-full h-full object-cover"></video>
+          </div>
+
+          <!-- Separador solo en vista horizontal -->
+          <div class="hidden lg:block w-2 lg:h-[200px] bg-[var(--primary)]">
+          </div>
+
+          <!-- Video Móvil -->
+          <div class="w-full lg:w-[150px] bg-[var(--text)] lg:h-[200px]">
+            <video
+              src="/video/wildlion-movil.mov"
+              autoplay
+              muted
+              loop
+              class="w-full h-full object-cover"></video>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="trabajo-card"
+        class="w-full lg:inline-flex flex-row justify-center lg:space-x-10 items-center"
+      >
+        <div
+          id="circle"
+          class="p-2 bg-[var(--secondary)] rounded-full lg:block hidden"
+        >
+        </div>
+        <div id="trabajo-descripcion" class="grid gap-4 w-full">
+          <div
+            id="proyecto"
+            class="inline-flex justify-start items-end w-full space-x-4"
+          >
+            <h3 class="text-2xl font-cal-sans tracking-wider">
+              Telor Usiga Producciones
+            </h3>
+            <p class="font-cal-sans text-sm">2023</p>
+          </div>
+          <p id="descripcion" class="font-cal-sans text-md tracking-widest">
+            Sitio web productora audiovisual. <br />
+            <span class="text-[var(--secondary)] font-cal-sans"
+              >Diseño y desarrollo.</span
+            >
+          </p>
+          <div
+            id="process-pill"
+            class="font-cal-sans tracking-widest text-xs bg-[var(--primary)] text-[var(--textContrast)] w-32 text-center p-[10px] rounded-[30px] cursor-pointer"
+          >
+            Finalizado
+          </div>
+        </div>
+        <div
+          id="video"
+          class="flex flex-col lg:flex-row justify-center items-center gap-4"
+        >
+          <!-- Video Desktop -->
+          <div class="w-full lg:w-[350px] bg-[var(--text)] lg:h-[200px]">
+            <video
+              src="/video/telorusiga-web.mov"
+              autoplay
+              muted
+              loop
+              class="w-full h-full object-cover"></video>
+          </div>
+
+          <!-- Separador solo en vista horizontal -->
+          <div class="hidden lg:block w-2 lg:h-[200px] bg-[var(--primary)]">
+          </div>
+
+          <!-- Video Móvil -->
+          <div class="w-full lg:w-[150px] bg-[var(--text)] lg:h-[200px]">
+            <video
+              src="/video/telorusiga-movil.mov"
+              autoplay
+              muted
+              loop
+              class="w-full h-full object-cover"></video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<style>
+  #trabajo-descripcion {
+    cursor: pointer;
+    padding: 20px;
+  }
+  #trabajo-descripcion:hover {
+    background-color: var(--backgroundCards);
+    border-radius: 30px;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+    transform: scale(1.02);
+  }
+  #process-pill {
+    box-shadow: var(--shadowBox);
+    text-transform: lowercase;
+  }
+  #circle {
+    box-shadow: var(--shadowBox);
+  }
+</style>

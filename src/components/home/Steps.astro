@@ -1,0 +1,82 @@
+---
+import ProcessModal from "./modal/ProcessModal";
+---
+
+<section class="bg-[var(--backgroundCards)] rounded-t-[100px]">
+  <div
+    id="cards"
+    class="w-full lg:inline-flex flex-row justify-between items-center lg:space-y-0 space-y-6 p-20"
+  >
+    <!-- Card 1 -->
+    <div
+      class="card bg-[var(--background)] flex flex-col justify-evenly space-y-4 px-6 py-6 lg:w-72 w-full h-60 cursor-pointer duration-500"
+    >
+      <h1 class="font-cal-sans text-[var(--accent)] text-2xl select-none">1</h1>
+      <h1
+        class="font-cal-sans text-[var(--text)] text-3xl tracking-wider select-none"
+      >
+        Cuéntame
+      </h1>
+      <p
+        class="font-cal-sans text-[var(--text)] leading-5 text-xs tracking-widest select-none"
+      >
+        Escucharte es fundamental. Me contarás tu visión del producto.
+        Dibujaremos mockups para definir una estructura base.
+      </p>
+    </div>
+    <!-- Card 2 -->
+    <div
+      class="card bg-[var(--background)] flex flex-col justify-evenly space-y-4 px-6 py-6 lg:w-72 w-full h-60 cursor-pointer duration-500"
+    >
+      <h1 class="font-cal-sans text-[var(--accent)] text-2xl select-none">2</h1>
+      <h1
+        class="font-cal-sans text-[var(--text)] text-3xl tracking-wider select-none"
+      >
+        Manos a la obra
+      </h1>
+      <p
+        class="font-cal-sans text-[var(--text)] text-xs leading-5 tracking-widest select-none"
+      >
+        Crearemos un MVP del producto, validaremos el diseño con pruebas y
+        retroalimentación activa.
+      </p>
+    </div>
+    <!-- Card 3 -->
+    <div
+      class="card bg-[var(--background)] flex flex-col justify-evenly space-y-4 px-6 py-6 lg:w-72 w-full h-60 cursor-pointer duration-500"
+    >
+      <h1 class="font-cal-sans text-[var(--accent)] text-2xl select-none">3</h1>
+      <h1
+        class="font-cal-sans text-[var(--text)] text-3xl tracking-wider select-none"
+      >
+        Iteración
+      </h1>
+      <p
+        class="font-cal-sans text-[var(--text)] leading-5 text-xs tracking-widest select-none"
+      >
+        Repetimos el ciclo hasta lograr tu visión al 100%. Me importa mucho
+        cumplir con tus expectativas.
+      </p>
+    </div>
+  </div>
+
+  <!-- <div
+    id="button-line"
+    class="w-full inline-flex justify-start space-x-20 items-center px-20"
+  >
+    <ProcessModal client:load />
+  </div> -->
+</section>
+
+<style>
+  .card {
+    padding: 20px;
+    border-radius: 30px;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+    /* Opcional: puedes también hacer que la sombra se intensifique al hover */
+    /* box-shadow: 0 6px 20px rgba(0,0,0,0.15); */
+  }
+</style>

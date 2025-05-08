@@ -64,8 +64,8 @@ export default function Chatbot() {
       <div style={styles.chatBubble}>
         {step === "start" && (
           <div className="grid gap-2">
-            <p style={styles.messageChatbot}>
-              ¡Hola! Soy el asistente virtual de Antonia 🤖 ¿Cómo te puedo ayudar hoy?
+            <p className="text-start" style={styles.messageChatbot}>
+              ¡Hola! Soy el asistente virtual de Antonia. ¿Cómo te puedo ayudar hoy?
             </p>
             <button style={styles.button} onClick={() => handleOption("idea")}>
               Tengo una idea en mente 💡
@@ -81,7 +81,7 @@ export default function Chatbot() {
 
         {step === "contacto" && (
           <>
-            <p style={styles.messageChatbot}>¡Cuéntame tu idea! 💬</p>
+            <p className="text-start" style={styles.messageChatbot}>¡Cuéntame tu idea! 💬 y no olvides poner tus datos de contacto 📩 .</p>
             <textarea
               style={styles.textarea}
               value={message}

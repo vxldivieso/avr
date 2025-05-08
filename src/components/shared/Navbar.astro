@@ -1,8 +1,3 @@
----
-const currentUrl = Astro.url.pathname;
-const currentHash = Astro.url.hash;
----
-
 <header
   id="navbar"
   class="fixed top-0 left-0 w-full z-50 flex justify-between items-center lg:px-20 px-2 py-8 transition-all duration-300"
@@ -14,10 +9,7 @@ const currentHash = Astro.url.hash;
     <div
       class="inline-flex items-center space-x-4 tracking-widest font-cal-sans"
     >
-      <a
-        class="nav-item border-b-4 duration-300 lg:text-sm text-xs"
-        href="/home"
-      >
+      <a class="nav-item border-b-4 duration-300 lg:text-sm text-xs" href="/">
         hola!
       </a>
       <a
@@ -28,13 +20,13 @@ const currentHash = Astro.url.hash;
       </a>
       <a
         class="nav-item border-b-4 duration-300 lg:text-sm text-xs"
-        href="/home#mi-trabajo"
+        href="/#mi-trabajo"
       >
         mi trabajo
       </a>
       <a
         class="nav-item border-b-4 duration-300 lg:text-sm text-xs"
-        href="/home#hablemos"
+        href="/#hablemos"
       >
         hablemos
       </a>

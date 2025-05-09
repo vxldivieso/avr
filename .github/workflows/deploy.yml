@@ -33,6 +33,9 @@ jobs:
       - name: Build Astro project
         run: npm run build
 
+      - name: List build output
+        run: ls -la dist # Verifica que dist contenga los archivos correctos
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

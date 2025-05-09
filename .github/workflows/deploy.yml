@@ -1,10 +1,8 @@
 name: Deploy to GitHub Pages
 
 on:
-  # Trigger the workflow every time you push to the `main` branch
   push:
     branches: [main]
-  # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
 
 permissions:
@@ -24,17 +22,21 @@ jobs:
         with:
           node-version: "20"
 
-      # Eliminar node_modules y package-lock.json
       - name: Clean up old dependencies
         run: |
           rm -rf node_modules
           rm -f package-lock.json
 
       - name: Install dependencies
-        run: npm install # Esto volverá a instalar las dependencias
+        run: npm install
 
       - name: Build Astro project
-        run: npm run build # Este comando ejecuta la construcción de Astro
+        run: npm run build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: ./dist
 
   deploy:
     needs: build
@@ -43,14 +45,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      # Paso 1: Checkout del código
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      # Paso 2: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          # Especifica la carpeta que contiene tu sitio construido
-          folder: dist # En Astro, por defecto, los archivos generados están en 'dist'

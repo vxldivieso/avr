@@ -35,3 +35,22 @@ jobs:
 
       - name: Build Astro project
         run: npm run build # Este comando ejecuta la construcción de Astro
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      # Paso 1: Checkout del código
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Paso 2: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          # Especifica la carpeta que contiene tu sitio construido
+          folder: dist # En Astro, por defecto, los archivos generados están en 'dist'

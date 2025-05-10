@@ -83,6 +83,7 @@ import "../styles/global.css";
           Curriculum<span class="text-[var(--accent)]">.</span>
         </h1>
         <button
+          id="download-cv"
           class="shadow-[var(--shadowBox)] w-full lg:w-40 bg-[var(--accent)] text-[var(--textContrast)] font-cal-sans lowercase tracking-widest px-6 py-3 text-xs rounded-[30px] cursor-pointer"
         >
           Descargar CV
@@ -118,3 +119,13 @@ import "../styles/global.css";
     cursor: pointer;
   }
 </style>
+
+<script>
+  const downloadCVButton = document.getElementById(
+    "download-cv"
+  ) as HTMLInputElement;
+
+  downloadCVButton.addEventListener("click", () => {
+    window.open("/avr/pdf/CV.pdf", "_blank"); // Ajusta la URL del CV
+  });
+</script>

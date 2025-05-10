@@ -22,7 +22,7 @@ export default function Chatbot() {
     if (option === "idea") {
       setStep("contacto");
     } else if (option === "cv") {
-      window.open("public/pdf/cv.pdf", "_blank"); // Ajusta la URL del CV
+      window.open("/avr/public/pdf/cv.pdf", "_blank"); // Ajusta la URL del CV
     } else if (option === "colaborar") {
       setStep("colaborar");
     }
@@ -176,7 +176,7 @@ const styles = {
   },
   button: {
     backgroundColor: "var(--secondary)", // Usamos la variable del color primario
-    color: "var(--text)", // Usamos el color de texto en contraste
+    color: "var(--textContrast)", // Usamos el color de texto en contraste
     fontSize: "10px",
     border: "none",
     padding: "12px",

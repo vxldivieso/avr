@@ -5,7 +5,7 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://vxldivieso.github.io/avr",
-  base: "/",
+  site: "https://vxldivieso.github.io",
+  base: "/avr",
   integrations: [react()],
 });

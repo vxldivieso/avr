@@ -22,7 +22,7 @@ export default function Chatbot() {
     if (option === "idea") {
       setStep("contacto");
     } else if (option === "cv") {
-      window.open("/avr/public/pdf/cv.pdf", "_blank"); // Ajusta la URL del CV
+      window.open("/avr/pdf/cv.pdf", "_blank"); // Ajusta la URL del CV
     } else if (option === "colaborar") {
       setStep("colaborar");
     }

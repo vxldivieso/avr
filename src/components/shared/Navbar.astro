@@ -1,6 +1,6 @@
 <header
   id="navbar"
-  class="fixed top-0 left-0 w-full h-auto z-50 lg:p-10 p-2 inline-flex space-x-2 justify-between items-center transition-all duration-300"
+  class="fixed top-0 left-0 w-full h-auto z-50 lg:px-10 lg:py-10 p-2 inline-flex space-x-2 justify-between items-center transition-all duration-300"
 >
   <nav
     class="nav bg-[var(--primary)] rounded-full text-[var(--textContrast)] shadow-[var(--shadowBox)] lg:px-10 px-4 py-4"
@@ -188,9 +188,9 @@
         "bg-[var(--backgroundCards)]",
         "bg-opacity-80",
         "backdrop-blur",
-        "py-4"
+        "lg:py-4"
       );
-      navbar?.classList.remove("py-8");
+      navbar?.classList.remove("lg:py-10");
 
       nav.forEach((item) => {
         item.classList.remove(
@@ -204,9 +204,9 @@
         "bg-[var(--backgroundCards)]",
         "bg-opacity-80",
         "backdrop-blur",
-        "py-4"
+        "lg:py-4"
       );
-      navbar?.classList.add("py-8");
+      navbar?.classList.add("lg:py-10");
       nav.forEach((item) => {
         item.classList.remove("bg-[var(--tertiary)]", "text-[var(--text)]");
         item.classList.add("bg-[var(--primary)]", "text-[var(--textContrast)]");

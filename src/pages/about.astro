@@ -81,12 +81,20 @@ import "../styles/global.css";
         >
           Curriculum<span class="text-[var(--accent)]">.</span>
         </h1>
-        <button
-          id="download-cv"
-          class="shadow-[var(--shadowBox)] w-full lg:w-40 bg-[var(--accent)] text-[var(--textContrast)] font-cal-sans lowercase tracking-widest px-6 py-3 text-xs rounded-[30px] cursor-pointer"
-        >
-          Descargar CV
-        </button>
+        <div class="inline-flex w-full justify-around items-center space-x-2">
+          <button
+            id="download-cv-es"
+            class="shadow-[var(--shadowBox)] w-full lg:w-48 bg-[var(--primary)] text-[var(--textContrast)] font-cal-sans lowercase tracking-widest px-6 py-3 text-xs rounded-[30px] cursor-pointer"
+          >
+            Descargar CV (es)
+          </button>
+          <button
+            id="download-cv-en"
+            class="shadow-[var(--shadowBox)] w-full lg:w-48 bg-[var(--accent)] text-[var(--textContrast)] font-cal-sans lowercase tracking-widest px-6 py-3 text-xs rounded-[30px] cursor-pointer"
+          >
+            Download CV (en)
+          </button>
+        </div>
       </div>
     </div>
 
@@ -119,11 +127,18 @@ import "../styles/global.css";
 </style>
 
 <script>
-  const downloadCVButton = document.getElementById(
-    "download-cv"
+  const downloadCVButtonEs = document.getElementById(
+    "download-cv-es"
+  ) as HTMLInputElement;
+  const downloadCVButtonEn = document.getElementById(
+    "download-cv-en"
   ) as HTMLInputElement;
 
-  downloadCVButton.addEventListener("click", () => {
-    window.open("/avr/pdf/CV.pdf", "_blank"); // Ajusta la URL del CV
+  downloadCVButtonEs.addEventListener("click", () => {
+    window.open("/avr/pdf/CV-ES.pdf", "_blank"); // Ajusta la URL del CV
+  });
+
+  downloadCVButtonEn.addEventListener("click", () => {
+    window.open("/avr/pdf/CV-EN.pdf", "_blank"); // Ajusta la URL del CV
   });
 </script>

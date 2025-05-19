@@ -50,7 +50,7 @@ const trabajos = [
 
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     {trabajos.map((trabajo) => (
-      <div class="bg-[var(--backgroundCardLight)] rounded-4xl shadow-lg overflow-hidden transition-transform transform hover:scale-105 cursor-pointer">
+      <div class="bg-[var(--backgroundCardLight)] rounded-4xl shadow-lg overflow-hidden transition-transform transform hover:scale-105 cursor-pointer tracking-wide">
         {/* Contenedor del Video - El video se reproducirá al hacer hover en este div */}
         <div class="relative w-full h-56  group">
           <video
@@ -85,14 +85,14 @@ const trabajos = [
 
         {/* Contenido de la Card */}
         <div class="p-6">
-          <h3 class="text-xl text-[var(--text)] font-semibold mb-2">{trabajo.titulo}</h3>
-          <p class="text-[var(--text)] text-base mb-4">{trabajo.descripcion}</p>
+          <h3 class="text-xl text-[var(--text)] font-cal-sans  mb-2">{trabajo.titulo}</h3>
+          <p class="text-[var(--text)] font- text-base mb-4 ">{trabajo.descripcion}</p>
 
           <div class="text-sm text-[var(--text)] mb-2">
-            <span class="font-semibold">Estado:</span> {trabajo.estado}
+            <span class="font-cal-sans font-semibold">Estado:</span> {trabajo.estado}
           </div>
           <div class="text-sm text-[var(--text)]">
-            <span class="font-semibold">Rol:</span> {trabajo.rol}
+            <span class=" font-cal-sans font-semibold">Rol:</span> {trabajo.rol}
           </div>
         </div>
       </div>

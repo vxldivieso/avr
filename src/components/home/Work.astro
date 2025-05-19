@@ -8,7 +8,9 @@ const trabajos = [
     titulo: "Wild Lion",
     descripcion: "Sitio e-commerce dedicado a la comercialización de ropa infantil.",
     estado: "En proceso",
-    rol: "Diseño UI/UX y Desarrollo full stack MEAN",
+    roles: [
+      'Diseño UI/UX', 'Desarrollo MEAN'
+    ],
     video: "/avr/video/wildlion-web.mov", 
     poster: "/avr/img/wildlion.png"
   },
@@ -16,7 +18,7 @@ const trabajos = [
     titulo: "Domu",
     descripcion: "Sitio de adopción para mascotas en abandono.",
     estado: "En proceso",
-    rol: "Diseño UI/UX",
+    roles: ["Diseño UI/UX"],
     video: "/avr/video/domu-web.mov",
     poster: "/avr/img/domu.png"
   },
@@ -24,7 +26,7 @@ const trabajos = [
     titulo: "TelorUsiga Prod",
     descripcion: "Mi primera página web. Sitio web oficial productora audiovisual TelorUsiga.",
     estado: "Finalizado",
-    rol: "Diseño UI/UX y Desarrollo HTML,CSS,JS",
+    roles: ["Diseño UI/UX", "HTML,CSS,JS"],
     video: "/avr/video/telorusiga-web.mov",
     poster: "/avr/img/telorusiga.png"
   },
@@ -32,7 +34,7 @@ const trabajos = [
 ];
 ---
 
-<section class="container mx-auto px-4 py-12 mb-20">
+<section id="mi-trabajo" class="container mx-auto px-4 py-12 mb-20">
   
   <div
       id="title"
@@ -64,19 +66,36 @@ const trabajos = [
             Tu navegador no soporta la etiqueta de video.
           </video>
           {/* Script para reproducir/pausar en hover. Usamos is:inline para evitar conflictos con Astro. */}
-          <script is:inline>
+           <script is:inline>
+            // Selecciona todos los contenedores con la clase 'group'
             document.querySelectorAll('.group').forEach(container => {
-              // Busca el elemento de video dentro de cada contenedor
               const video = container.querySelector('video');
+              let pauseTimeout; // Variable para guardar el ID del timeout de pausa
+
               if (video) {
-                // Añade un listener para el evento mouseenter (cuando el cursor entra)
                 container.addEventListener('mouseenter', () => {
-                  video.play(); // Reproduce el video
+                  // Limpiar cualquier timeout de pausa pendiente
+                  clearTimeout(pauseTimeout);
+                  // Reproduce el video solo si no se está reproduciendo ya
+                  if (video.paused || video.ended) {
+                     video.play().catch(error => {
+                       // Capturar posibles errores de play() (por ejemplo, si el navegador lo bloquea)
+                       console.error("Error intentando reproducir video:", error);
+                     });
+                  }
                 });
-                // Añade un listener para el evento mouseleave (cuando el cursor sale)
+
                 container.addEventListener('mouseleave', () => {
-                  video.pause(); // Pausa el video
-                  // Opcional: video.currentTime = 0; // Reinicia el video al inicio
+                  // Establecer un pequeño retardo antes de pausar
+                  pauseTimeout = setTimeout(() => {
+                    video.pause(); // Pausa el video
+                    // Opcional: video.currentTime = 0; // Reinicia el video al inicio
+                  }, 100); // Retardo de 100ms (puedes ajustarlo si es necesario)
+                });
+
+                // Limpiar el timeout si el elemento se elimina del DOM (buena práctica)
+                container.addEventListener('remove', () => {
+                    clearTimeout(pauseTimeout);
                 });
               }
             });
@@ -89,10 +108,13 @@ const trabajos = [
           <p class="text-[var(--text)] font- text-base mb-4 ">{trabajo.descripcion}</p>
 
           <div class="text-sm text-[var(--text)] mb-2">
-            <span class="font-cal-sans font-semibold">Estado:</span> {trabajo.estado}
+            <span class="px-2 py-2 bg-[var(--tertiary)] text-white rounded-lg text-xs ">{trabajo.estado}</span>
+            {trabajo.roles.map((rol) =>(<span class="px-2 py-2 bg-[var(--primary)] mr-1 text-white rounded-lg text-xs ">{rol}</span>
+            ))}
+            
           </div>
           <div class="text-sm text-[var(--text)]">
-            <span class=" font-cal-sans font-semibold">Rol:</span> {trabajo.rol}
+            
           </div>
         </div>
       </div>

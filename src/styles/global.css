@@ -13,7 +13,7 @@
     --textContrast: #F7F9F9;
     --background: #f3f7f7;
     --backgroundCards: #eaefef ;
-    --backgroundCardLight: #EDF2F2;
+    --backgroundCardLight: white;
     --primary: #DB324D;
     --secondary: #56494E;
     --tertiary: #A29C9B;
@@ -28,7 +28,7 @@
     --textContrast: #060909;
     --background: #080c0c;
     --backgroundCards: #1C1B1D;
-    --backgroundCardLight: #211F21;
+    --backgroundCardLight: #1C1B1D;
     --primary:  #2892D7;
     --secondary: #B2DDF7;
     --tertiary: #5C5552;

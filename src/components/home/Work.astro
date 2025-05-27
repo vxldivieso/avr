@@ -11,7 +11,6 @@ const trabajos = [
     roles: [
       'Diseño UI/UX', 'Desarrollo MEAN'
     ],
-    video: "/avr/video/wildlion-web.mov", 
     poster: "/avr/img/wildlion.png"
   },
   {
@@ -19,16 +18,14 @@ const trabajos = [
     descripcion: "Sitio de adopción para mascotas en abandono.",
     estado: "En proceso",
     roles: ["Diseño UI/UX"],
-    video: "/avr/video/domu-web.mov",
     poster: "/avr/img/domu.png"
   },
   {
-    titulo: "TelorUsiga Prod",
-    descripcion: "Mi primera página web. Sitio web oficial productora audiovisual TelorUsiga.",
-    estado: "Finalizado",
-    roles: ["Diseño UI/UX", "HTML,CSS,JS"],
-    video: "/avr/video/telorusiga-web.mov",
-    poster: "/avr/img/telorusiga.png"
+    titulo: "Organizate",
+    descripcion: "Aplicación web de organización multitarea.",
+    estado: "En proceso",
+    roles: ["Diseño UI/UX", "Desarrollo MEAN"],
+    poster: "/avr/img/organizate.png"
   },
   // Añade más objetos para cada uno de tus trabajos
 ];
@@ -45,7 +42,7 @@ const trabajos = [
           Mi trabajo<span class="text-[var(--accent)]">.</span>
         </h1>
         <p class="text-[var(--text)] text-lg font-cal-sans tracking-widest">
-          Selección de algunos de mis trabajos
+          Selección de algunos de mis trabajos más recientes
         </p>
       </div>
     </div>
@@ -62,7 +59,7 @@ const trabajos = [
             preload="none"
             poster={trabajo.poster}
           >
-            <source src={trabajo.video} type="video/mp4">
+            <source src="" type="video/mp4">
             Tu navegador no soporta la etiqueta de video.
           </video>
           {/* Script para reproducir/pausar en hover. Usamos is:inline para evitar conflictos con Astro. */}
